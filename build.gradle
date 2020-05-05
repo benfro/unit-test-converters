@@ -12,8 +12,6 @@ plugins {
     id 'idea'
 }
 
-apply plugin: 'idea'
-
 group 'net.benfro'
 version '1.0-SNAPSHOT'
 
@@ -30,7 +28,11 @@ dependencies {
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
     testCompile group: 'org.mockito', name: 'mockito-core', version: '3.0.0'
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.2'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.2'
+}
+
+task printCp {
+    println configurations.runtime.resolve().join('\n')
 }
 
 test {

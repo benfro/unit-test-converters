@@ -1,12 +1,11 @@
 package net.benfro.testutils;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import com.google.common.collect.Lists;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 
 class ToNumberArrayArgumentConverterTest {
