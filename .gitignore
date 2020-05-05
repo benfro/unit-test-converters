@@ -24,3 +24,7 @@ hs_err_pid*
 
 /.idea
 /.gradle
+
+unit-test-converters.iml
+unit-test-converters.iws
+unit-test-converters.ipr
