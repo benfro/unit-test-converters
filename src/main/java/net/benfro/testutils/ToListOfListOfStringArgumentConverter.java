@@ -16,9 +16,9 @@ public class ToListOfListOfStringArgumentConverter extends SimpleArgumentConvert
    private final static WellFormedCharacterValidator VALIDATOR = new WellFormedCharacterValidator('[', ']');
 
    @Override
-   protected Object convert(Object input, Class<?> aClass) throws ArgumentConversionException {
+   protected Object convert(Object source, Class<?> targetType) throws ArgumentConversionException {
 
-      String indata = ((String) input).trim();
+      String indata = ((String) source).trim();
       if (!VALIDATOR.isBalanced(indata)) {
          throw new ArgumentConversionException("Expression is not well balanced");
       }

@@ -9,14 +9,14 @@ import org.junit.jupiter.params.converter.SimpleArgumentConverter;
 
 
 /**
- * Allow users to defina lists in the form '[foo, bar]' in CsvSurce tags. Behaves as the normal CSV Source string.
+ * Allow users to define lists in the form '[foo, bar]' in CsvSurce tags. Behaves as the normal CSV Source string.
  * Please refer to tests to check usage.
  *
  * https://stackoverflow.com/questions/34257547/split-string-on-comma-and-ignore-comma-in-double-quotes
  */
 public class ToListOfStringArgumentConverter extends SimpleArgumentConverter  {
-   protected List<String> convert(Object o, Class<?> aClass) throws ArgumentConversionException {
-      String indata = ((String) o).trim();
+   protected List<String> convert(Object source, Class<?> targetType) throws ArgumentConversionException {
+      String indata = ((String) source).trim();
       List<String> output = Lists.newArrayList();
       indata = indata.replace("[", "").replace("]", "").trim();
       if (indata.isEmpty()) {
